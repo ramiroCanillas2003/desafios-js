@@ -1,7 +1,7 @@
 
 /*DESAFIO COMPLEMENTARIO*/
 
-for(let i = 1; i <= 5; i++) {
+    for(let i = 1; i <= 5; i++) {
 
     const nombreEstudiante = prompt("Nombre del Estudiante: " + i );
 
@@ -28,13 +28,6 @@ for(let i = 1; i <= 5; i++) {
     console.log("El estudiante llamado" + nombreEstudiante + " tiene como nota final: " + notaFinal);
 
 }
-
-
-
-
-
-
-
 
 
 
