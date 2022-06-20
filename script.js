@@ -1,5 +1,107 @@
 
-/*DESAFIO COMPLEMENTARIO*/
+alert ("¡Bienvenid/a a nuestra empresa! Cuentanos.. ¿En qué te podemos ayudar?")
+let nombreUsuario = prompt("Ingresa tu nombre y apellido:")
+let inicio = confirm( nombreUsuario + "Responda lo siguiente: ¿Usted acepta términos y condiciones?")
+
+let planta 
+let hora
+let queja
+
+let masQuejas
+
+const ruidos = []
+const filtracionHumedad = []
+const olores = []
+
+class TareasDiarias {
+    constructor(cometido, hora, impedimento) {
+        this.cometido = cometido;
+        this.hora = hora;
+        this.impedimento = impedimento;
+    }
+}
+
+const posibleProblema = () => {
+        switch (prioridad.impedimento) {
+            case `1`: console.log("Consulta sobre precios.");
+                        ruidos.push(prioridad)
+            break;
+            case `2`: console.log("");
+                        filtracionHumedad.push(prioridad)
+            break;
+            case `3`: console.log("Consulta sobre tiempos de entrega.");
+                        olores.push(prioridad)
+            break;
+            default: console.log("Otro Asunto.");
+            break;
+        }
+    }
+
+const preguntaProblema = () => {
+    
+    planta = prompt(nombreUsuario + "¿De qué provincia nos visitas")
+    hora = prompt("¿Te interesa nuestros servicios?")
+    queja = prompt("Ingresa \n 1 - Consulta sobre precios. \n 2 - Consulta sobre tiempos de entrega. \n 3 - Otro asunto")
+
+    return prioridad = new TareasDiarias (planta, hora, queja)
+}
+
+if (inicio == true) {
+    preguntaProblema()
+    posibleProblema()
+    alert (`Excelente, ${nombreUsuario}.  Se informara sobre tu predido solicitado de ${planta}  cuanto antes ${hora}`)
+
+    masQuejas= confirm("¿Queres ingresar otro asunto?")
+
+    while (masQuejas == true) {
+        preguntaProblema()
+        posibleProblema()
+
+        alert (`¡¡Agendado!! ${nombreUsuario}!. Se agregó a tu lista de asuntos de ${planta} piso de las ${hora}`)
+
+        masQuejas= confirm("¿Queres ingresar otra asunto?")
+    }
+
+} else {
+    alert("¡Veremos que hacemos con sus pedidos! ¡Buena suerte!")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*DESAFIO COMPLEMENTARIO
 
     for(let i = 1; i <= 5; i++) {
 
@@ -27,7 +129,7 @@
 
     console.log("El estudiante llamado" + nombreEstudiante + " tiene como nota final: " + notaFinal);
 
-}
+}*/
 
 
 
