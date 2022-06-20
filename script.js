@@ -3,15 +3,15 @@ alert ("¡Bienvenid/a a nuestra empresa! Cuentanos.. ¿En qué te podemos ayudar
 let nombreUsuario = prompt("Ingresa tu nombre y apellido:")
 let inicio = confirm( nombreUsuario + "Responda lo siguiente: ¿Usted acepta términos y condiciones?")
 
-let planta 
+let pedido 
 let hora
 let queja
 
 let masQuejas
 
-const ruidos = []
-const filtracionHumedad = []
-const olores = []
+const precio = []
+const tiempo = []
+const otroAsunto = []
 
 class TareasDiarias {
     constructor(cometido, hora, impedimento) {
@@ -24,13 +24,13 @@ class TareasDiarias {
 const posibleProblema = () => {
         switch (prioridad.impedimento) {
             case `1`: console.log("Consulta sobre precios.");
-                        ruidos.push(prioridad)
+                        precio.push(prioridad)
             break;
             case `2`: console.log("");
-                        filtracionHumedad.push(prioridad)
+                        tiempo.push(prioridad)
             break;
             case `3`: console.log("Consulta sobre tiempos de entrega.");
-                        olores.push(prioridad)
+                        otroAsunto.push(prioridad)
             break;
             default: console.log("Otro Asunto.");
             break;
@@ -43,13 +43,13 @@ const preguntaProblema = () => {
     hora = prompt("¿Te interesa nuestros servicios?")
     queja = prompt("Ingresa \n 1 - Consulta sobre precios. \n 2 - Consulta sobre tiempos de entrega. \n 3 - Otro asunto")
 
-    return prioridad = new TareasDiarias (planta, hora, queja)
+    return prioridad = new TareasDiarias (pedido, hora, queja)
 }
 
 if (inicio == true) {
     preguntaProblema()
     posibleProblema()
-    alert (`Excelente, ${nombreUsuario}.  Se informara sobre tu predido solicitado de ${planta}  cuanto antes ${hora}`)
+    alert (`Excelente, ${nombreUsuario}.  Se informara sobre tu pedido solicitado cuanto antes.`)
 
     masQuejas= confirm("¿Queres ingresar otro asunto?")
 
@@ -57,7 +57,7 @@ if (inicio == true) {
         preguntaProblema()
         posibleProblema()
 
-        alert (`¡¡Agendado!! ${nombreUsuario}!. Se agregó a tu lista de asuntos de ${planta} piso de las ${hora}`)
+        alert (`¡¡Agendado!! ${nombreUsuario}. Se agregó a tu lista de asuntos`)
 
         masQuejas= confirm("¿Queres ingresar otra asunto?")
     }
@@ -65,33 +65,6 @@ if (inicio == true) {
 } else {
     alert("¡Veremos que hacemos con sus pedidos! ¡Buena suerte!")
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
