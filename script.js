@@ -1,7 +1,7 @@
 
-alert ("¡Bienvenid/a a nuestra empresa! Cuentanos.. ¿En qué te podemos ayudar?")
-let nombreUsuario = prompt("Ingresa tu nombre y apellido:")
-let inicio = confirm( nombreUsuario + "Responda lo siguiente: ¿Usted acepta términos y condiciones?")
+alert ("¡Bienvenido/a a nuestra empresa! Por favor, a continuación ingrese lo solicitado:")
+let nombreUsuario = prompt("Ingrese su nombre y apellido:")
+let inicio = confirm( nombreUsuario + "Responda lo siguiente:  ¿Usted acepta términos y condiciones?")
 
 let pedido 
 let hora
@@ -9,9 +9,9 @@ let queja
 
 let masQuejas
 
-const precio = []
-const tiempo = []
-const otroAsunto = []
+const precio = ["El total es de $20.000", "El total es de $30.000"]
+const tiempo = ["Se demoraría aproximadamente 3 meses", "Se demoraría aproximadamente 4 meses"]
+const otroAsunto = ["¡Esperamos solucionar su duda lo antes posible!"]
 
 class TareasDiarias {
     constructor(cometido, hora, impedimento) {
@@ -23,13 +23,13 @@ class TareasDiarias {
 
 const posibleProblema = () => {
         switch (prioridad.impedimento) {
-            case `1`: console.log("Consulta sobre precios.");
+            case `1`: console.log(precio[0]);
                         precio.push(prioridad)
             break;
-            case `2`: console.log("");
+            case `2`: console.log(tiempo[1]);
                         tiempo.push(prioridad)
             break;
-            case `3`: console.log("Consulta sobre tiempos de entrega.");
+            case `3`: console.log(otroAsunto[1]);
                         otroAsunto.push(prioridad)
             break;
             default: console.log("Otro Asunto.");
@@ -39,7 +39,7 @@ const posibleProblema = () => {
 
 const preguntaProblema = () => {
     
-    planta = prompt(nombreUsuario + "¿De qué provincia nos visitas")
+    planta = prompt(nombreUsuario + "¿De qué provincia nos visitas?")
     hora = prompt("¿Te interesa nuestros servicios?")
     queja = prompt("Ingresa \n 1 - Consulta sobre precios. \n 2 - Consulta sobre tiempos de entrega. \n 3 - Otro asunto")
 
@@ -65,6 +65,16 @@ if (inicio == true) {
 } else {
     alert("¡Veremos que hacemos con sus pedidos! ¡Buena suerte!")
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /*DESAFIO COMPLEMENTARIO 1
