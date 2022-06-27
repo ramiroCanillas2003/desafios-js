@@ -13,8 +13,16 @@ const precio = ["El total es de $20.000", "El total es de $30.000"]
 const tiempo = ["Se demoraría aproximadamente 3 meses", "Se demoraría aproximadamente 4 meses"]
 const otroAsunto = ["¡Esperamos solucionar su duda lo antes posible!"]
 
+// FECHA
+
+const hoy = new Date("June 27, 2022")
+
+console.log( hoy.toLocaleDateString() ) // Fecha de hoy: 27/6/2022
+
 class TareasDiarias {
+
     constructor(cometido, hora, impedimento) {
+
         this.cometido = cometido;
         this.hora = hora;
         this.impedimento = impedimento;
@@ -23,16 +31,18 @@ class TareasDiarias {
 
 const posibleProblema = () => {
         switch (prioridad.impedimento) {
+
             case `1`: console.log(precio[0]);
                         precio.push(prioridad)
             break;
             case `2`: console.log(tiempo[1]);
                         tiempo.push(prioridad)
             break;
-            case `3`: console.log(otroAsunto[1]);
+            case `3`: console.log(otroAsunto[2]);
                         otroAsunto.push(prioridad)
+
             break;
-            default: console.log("Otro Asunto.");
+            default: console.log("No me interesa.");
             break;
         }
     }
@@ -40,7 +50,7 @@ const posibleProblema = () => {
 const preguntaProblema = () => {
     
     planta = prompt(nombreUsuario + "¿De qué provincia nos visitas?")
-    hora = prompt("¿Te interesa nuestros servicios?")
+    hora = confirm("¿Te interesa nuestros servicios?")
     queja = prompt("Ingresa \n 1 - Consulta sobre precios. \n 2 - Consulta sobre tiempos de entrega. \n 3 - Otro asunto")
 
     return prioridad = new TareasDiarias (pedido, hora, queja)
@@ -64,7 +74,24 @@ if (inicio == true) {
 
 } else {
     alert("¡Veremos que hacemos con sus pedidos! ¡Buena suerte!")
-}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
