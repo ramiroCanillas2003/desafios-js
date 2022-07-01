@@ -76,6 +76,13 @@ if (inicio == true) {
     alert("¡Veremos que hacemos con sus pedidos! ¡Buena suerte!")
 } 
 
+/* DOM */
+
+let titulo = document.getElementById("titulo")
+
+titulo.innerText = "¡Gracias por visitarnos, esperamos que vuelvas pronto!"
+console.log( titulo.innerText ) 
+
 
 /*DESAFIO COMPLEMENTARIO 1
 
